@@ -209,9 +209,6 @@ values
 (7, 32, '2024-06-07', '2024-06-12'), (8, 37, '2024-06-08', NULL), 
 (9, 42, '2024-06-09', NULL), (10, 47, '2024-06-10', NULL);
 
-select * from rental;
-
-
 --Attemps to make queries
 
 select * from movie;
