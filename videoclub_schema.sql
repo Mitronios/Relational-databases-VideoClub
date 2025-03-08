@@ -115,6 +115,10 @@ references associates(id);
 --Data insert: manually
 
 --Associates
+
+--Unique passport
+create unique index unique_passport on associates (lower(passport));
+
 insert into associates (passport, first_name, last_name) 
 values
 ('A1234567', 'John', 'Doe'),
@@ -143,6 +147,10 @@ values
 (10, 'M-0010', '2024-05-15', '2025-05-15');
 
 --Address
+
+--Unique street
+create unique index unique_street on address (lower(street));
+
 insert into address (associate_id, zip_code, street, number, apartment) 
 values
 (1, '12345', 'Main St', 101, 'A'),
@@ -157,7 +165,13 @@ values
 (10, '01234', 'Spruce St', 1010, 'F');
 
 --Movies
+
 --Genre
+
+--Unique genre
+create unique index unique_genre on genre (lower(genre_name));
+
+
 insert into genre (genre_name)
 values
 ('Action'), ('Comedy'), ('Drama'), 
@@ -166,6 +180,10 @@ values
 ('Adventure');
 
 --Director
+
+--Unique director
+create unique index unique_director on director (lower(director_name));
+
 insert into director (director_name)
 values
 ('Steven Spielberg'), ('Christopher Nolan'), ('Martin Scorsese'), 
@@ -173,6 +191,10 @@ values
 ('Peter Jackson'), ('Tim Burton'), ('David Fincher'), ('Greta Gerwig');
 
 --Movie
+
+--Unique title
+create unique index unique_title on movie (lower(title));
+
 insert into movie (title, genre_id, director_id, synopsis)
 values
 ('Inception', 5, 2, 'A mind-bending thriller about dreams and the power of ideas.'),
@@ -187,6 +209,7 @@ values
 ('Barbie', 8, 10, 'A modern take on the famous doll, more than just dolls.');
 
 --Copies (five per each)
+
 insert into movie_copy (movie_id, rented, status)
 values
 (1, FALSE, 'Available'), (1, TRUE, 'Rented'), (1, FALSE, 'Available'), (1, FALSE, 'Available'), (1, TRUE, 'Lost'),
