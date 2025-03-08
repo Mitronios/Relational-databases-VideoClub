@@ -18,7 +18,7 @@ The database schema includes the following entities:
 * **Membership:** Tracks membership details (start date, end date, membership type).
 * **Address:** Stores address information for associates.
 * **Rental:** Records rental transactions, linking associates, movies, and rental dates.
-* **Movie:** Contains details about the movies available for rent (title, genre, release year, etc.).
+* **Movie:** Contains details about the movies available for rent (title, genre, director and synopsis).
 * **Others:** Additional tables, Genre, Director, Movie_copy and Available_copy for normalisation purposes.
 
 ## UML Diagram
